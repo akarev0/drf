@@ -1,6 +1,5 @@
-from typing import Collection, Optional
 from django.db import models
-from django.forms import ValidationError
+
 
 options = [
     ("AG", "Solomon Islands"),
@@ -46,6 +45,6 @@ class Flight(models.Model):
     departure_airport = models.CharField(choices=options, max_length=255)
     arrival_airport = models.CharField(choices=options, max_length=255)
     # An aircraft, that can be assigned to the flight at its creation or later
-    aicraft = models.ForeignKey(
+    aircraft = models.ForeignKey(
         Aircraft, on_delete=models.PROTECT, default=None, blank=True, null=True
     )
