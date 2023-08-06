@@ -17,3 +17,4 @@ pytest-django==4.5.2
 pytz==2023.2
 sqlparse==0.4.3
 tomli==2.0.1
+django-filter==23.2
